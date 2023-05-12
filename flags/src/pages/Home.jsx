@@ -1,13 +1,22 @@
+import Helmet from 'react-helmet';
+import Countries from '../components/Countries';
 import Navigation from '../components/Navigation';
 import Logo from '../components/logo';
 
+const pageTitle = 'Accueil';
+
 const Home = () => {
   return (
-    <div>
-    <Logo />
-      <Navigation />
-      <h1>Accueil 🏠</h1>
-    </div>
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
+      <div>
+        <Logo />
+        <Navigation />
+        <Countries />
+      </div>
+    </>
   );
 };
 
